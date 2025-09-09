@@ -470,3 +470,111 @@ p {
     display: none; /* Hide nav on smaller screens until a menu is added */
   }
 }
+
+/* --- Brand accent styling -------------------------------------------- */
+
+/* Gold underline for section headings */
+.section h2 {
+  color: var(--green);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.35rem;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--gold), #f2d678, var(--gold));
+}
+
+/* Subtle colour change for links on hover */
+a:hover {
+  color: var(--green);
+}
+
+/* Gold button variant */
+.btn.gold {
+  background: var(--gold);
+  color: #111;
+  border: 2px solid transparent;
+}
+
+.btn.gold:hover {
+  filter: brightness(0.95);
+}
+
+/* Branded section divider with soft image overlay */
+.divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 240px;
+  margin: 48px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('Endless%20Ambition_%20Mountain%20of%20Opportunity.png') center/cover no-repeat;
+  filter: saturate(1) contrast(1.05);
+  opacity: 0.35;
+}
+
+.divider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(0,0,0,0.15), rgba(0,0,0,0.45));
+}
+
+.divider h2 {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+.divider h2::after {
+  display: none;
+}
+
+/* Watermark utility to add a faint infinity motif */
+.watermark {
+  position: relative;
+  overflow: hidden;
+}
+
+.watermark::after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -40px;
+  width: 280px;
+  height: 280px;
+  background: url('Endless%20Ambition_%20Mountain%20of%20Opportunity.png') center/contain no-repeat;
+  opacity: 0.08;
+  pointer-events: none;
+  filter: grayscale(0.1) contrast(1.1);
+}
+
+/* Slightly soften edges and shadows for cards/testimonials/pricing */
+.services .card,
+.pricing-card,
+.testimonials blockquote {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
