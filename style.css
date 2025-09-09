@@ -189,8 +189,10 @@ body {
 
 /* Process */
 .process-list {
+  /* Reset the counter so each list starts at 1 instead of repeating '1' */
   list-style: none;
   padding-left: 0;
+  counter-reset: step;
 }
 
 .process-list li {
