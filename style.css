@@ -471,6 +471,14 @@ p {
   }
 }
 
+/* Improve hero text readability by adding a subtle outline and drop shadow */
+.hero h1, .hero p {
+  /* White stroke helps the letters stand out against the background */
+  -webkit-text-stroke: 0.5px #ffffff;
+  /* Soft dark shadow creates contrast without overpowering the text */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
 /* --- Brand accent styling -------------------------------------------- */
 
 /* Gold underline for section headings */
